@@ -1,0 +1,28 @@
+<!--
+<div *ngFor="let park of parks;let i=index">
+<h4>{{i+1}}:{{park.id}}</h4>
+<h4>{{park.name}}</h4>
+
+  <img src="assets/img/thumbs/{{park.image}}">
+   !-->
+<div class="table" id="table_1">
+<table><tr>
+  <th>ID</th>
+  <th>NAME</th>
+  <th>IMAGE</th>
+</tr></table>
+</div>
+
+<div *ngFor="let park of parks">
+<div class="table" id="table_id">
+  <table>
+
+    <tr>
+      <td>{{park.id}}</td>
+      <td>{{park.name}}</td>
+      <td><img src="assets/img/thumbs/{{park.image}}"></td>
+
+    </tr>
+  </table>
+</div>
+</div>

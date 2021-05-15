@@ -1,0 +1,34 @@
+<div class="container">
+
+  <!-- 下面的let就是寫類似一個迴圈印出剛剛定義的Product!-->
+
+  <div *ngFor="let product of Product;let i=index">
+    <!--
+  <h3><a (click)="selectedItem(product)"></a></h3> !-->
+    <!--<h3><a>{{product.name}}</a></h3> !-->
+
+    <h3><a routerLink="/detail/{{i+1}}"> {{i+1}}:{{product.name}}</a></h3>
+
+    <!--
+  <div *ngIf="product.description">
+    {{product.description}}
+  </div>
+    <div *ngIf="product.price">
+       在price 後面可以加上
+        <div *ngIf="product.price >700">
+        就只會顯示大於700的價格
+
+      {{product.price}}
+    </div>
+    上面這段可以加上去，但是我想讓他好看點，所以要點選擇才出現比較好
+  !-->
+    <button (click)="selectedItem(product)">Select</button>
+
+  </div>
+  <div *ngIf="selectedProduct">
+    <!-- {{selectedProduct.name}} !-->
+
+    <app-product-detail [Product]="selectedProduct"></app-product-detail>
+
+  </div>
+</div>

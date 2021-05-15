@@ -1,0 +1,22 @@
+<div class="table" id="table_1">
+  <table><tr>
+    <th>NMAE</th>
+    <th>IMAGE</th>
+    <th>DATA</th>
+  </tr></table>
+</div>
+
+<div *ngFor="let park of parks">
+  <div class="table" id="table_id">
+    <table>
+
+      <tr>
+        <td>{{park.name}}</td>
+        <td><img src="assets/img/thumbs/{{park.image}}"></td>
+        <td>{{park.data}}</td>
+
+
+      </tr>
+    </table>
+  </div>
+</div>
