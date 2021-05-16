@@ -1,8 +1,7 @@
 import { Component, OnInit ,Input} from '@angular/core';
 import {Product} from "../product";
 import {PRODUCTS} from "../product";
-import {Detail} from "../detail";
-
+import {GoodsService} from "../goods.service";
 @Component({
   selector: 'app-product-detail',
   templateUrl: './product-detail.component.html',
@@ -10,8 +9,9 @@ import {Detail} from "../detail";
 })
 export class ProductDetailComponent implements OnInit {
   @Input() Product:Product;
-
-  constructor() {
+  goods:any;
+  constructor(private goodservice:GoodsService) {
+    this.goodservice.getGoods().then(product=>{this.goods=product})
     this.Product={
 
       name: 'iPhone 13 iPhone 12',

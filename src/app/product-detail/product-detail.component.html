@@ -1,3 +1,4 @@
+
 <div class="table" id="table_id">
   <table>
     <tr>
@@ -12,3 +13,27 @@
     </tr>
   </table>
 </div>
+
+<div class="table" id="table_1">
+  <table><tr>
+    <th>ID</th>
+    <th>Product</th>
+    <th>Price</th>
+    <th>Note</th>
+  </tr></table>
+</div>
+<div *ngFor="let good of goods">
+  <div class="table" id="table_it">
+    <table>
+
+      <tr>
+        <td>{{good.id}}</td>
+        <td>{{good.product}}</td>
+        <td>{{good.price}}</td>
+        <td>{{good.note}}</td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+

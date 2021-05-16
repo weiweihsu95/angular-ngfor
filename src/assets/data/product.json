@@ -1,0 +1,24 @@
+[
+
+{
+
+	"id":1,
+	"product":"iPhone 13",
+	"price":30400,
+	"note":"This is a BEST iPhone!!!"
+
+},
+{
+	"id":2,
+	"product":"iPhone 12",
+	"price":28500,
+	"note":"去年發表的還不錯"
+
+},
+{
+	"id":3,
+	"product":"iPhone 11",
+	"price":24900,
+	"note":"超值手機啊！！！"
+}
+]
